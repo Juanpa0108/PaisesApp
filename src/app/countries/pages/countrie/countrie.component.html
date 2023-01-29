@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="col">
+    <app-pais-input
+    (onEnviar)="enviarDato( $event )"
+    (onDebounce)="sugerencias($event)"
+    placeholder="Buscar Pais.."></app-pais-input>
+  </div>
+</div>
+
+<hr>
+
+<div class="alert alert-danger " *ngIf="hayError">
+    No se encontro nada
+</div>
+
+<div class="row">
+  <div class="col">
+   <app-pais-tabla [dataEntrante]="dataEntrante" [hayError]="hayError" ></app-pais-tabla>
+  </div>
+</div>

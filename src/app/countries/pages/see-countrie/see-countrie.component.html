@@ -1,0 +1,10 @@
+<div class="card mb-3" *ngFor="let index of dataEntrante">
+  <img class="card-img-top bandera" src="{{index.flags.png}}">
+  <div class="card-body">
+    <h5 class="card-title">{{index.name.common}}</h5>
+    <p class="card-text">Capital - {{index.capital}}</p>
+    <p class="card-text">Codigo - {{index.cca3}}</p>
+    <p class="card-text">Pobalcion - {{index.population | number}}</p>
+    <p class="card-text"><small class="text-muted">Celular  {{index.idd.root}}</small></p>
+  </div>
+</div>
